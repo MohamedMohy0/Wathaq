@@ -38,7 +38,7 @@ try:
     num_female = len(female_values)
 
 
-    prev_num_sheet_url = 'https://docs.google.com/spreadsheets/d/1ixe0S7_f0XKi7b6y8A6FhcI9GWwzqIZnxM_hUxDImd4/edit#gid=0'
+    prev_num_sheet_url = 'https://docs.google.com/spreadsheets/d/1DVTXQjnrjO3NlFrtUuDIvnTdsn9kRvGxwzvopEAYLlQ/edit?gid=0#gid=0'
     prev_num_sheet = gc.open_by_url(prev_num_sheet_url)
     prev_ws = prev_num_sheet.sheet1
 
