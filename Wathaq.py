@@ -45,7 +45,7 @@ try:
     prev_num_male = prev_ws.acell('A1').value
     prev_male = int(prev_num_male) if prev_num_male else 0
 
-prev_num_female = prev_ws.acell('B1').value
+    prev_num_female = prev_ws.acell('B1').value
     prev_female = int(prev_num_female) if prev_num_female else 0
 
     if num_male > prev_male:
