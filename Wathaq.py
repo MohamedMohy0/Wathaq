@@ -67,7 +67,7 @@ try:
                 print("Message sent successfully!")
         except:
             print("خطأ في تحديث الجدول:", e)
-    elif num_female > prev_female:
+    if num_female > prev_female:
         try:
             prev_ws.update('C1', [[str(num_female)]])
             print("تم تحديث عدد الصفوف في الجدول الثاني.")
