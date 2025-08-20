@@ -89,10 +89,10 @@ try:
 
         except:
             print("خطأ في تحديث الجدول:", e)
-except:
+except Exception as e:
     bot_token = os.environ.get('BOT_TOKEN')
     chat_id = os.environ.get('MOHY_ID')
-    message = f'There is an Error go to check it '
+    message = f'There is an Error go to check it {e} '
     url = f"https://api.telegram.org/bot{bot_token}/sendMessage"
     payload = {
             'chat_id': chat_id,
