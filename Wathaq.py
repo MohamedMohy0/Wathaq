@@ -65,7 +65,8 @@ try:
             response = requests.post(url, data=payload)
             if response.status_code == 200:
                 print("Message sent successfully!")
-
+        except:
+            print("خطأ في تحديث الجدول:", e)
     elif num_female > prev_female:
         try:
             prev_ws.update('B1', [[str(num_female)]])
@@ -86,7 +87,7 @@ try:
             else:
                 print(f"Failed to send message: {response.text}")
 
-        except APIError as e:
+        except:
             print("خطأ في تحديث الجدول:", e)
 except:
     bot_token = os.environ.get('BOT_TOKEN')
