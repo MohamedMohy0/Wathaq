@@ -92,10 +92,14 @@ try:
 except Exception as e:
     bot_token = os.environ.get('BOT_TOKEN')
     chat_id = os.environ.get('MOHY_ID')
-    message = f'There is an Error go to check it {e} '
+
+    # Get error message and traceback
+    error_message = f"⚠️ An error occurred:\n{str(e)}\n\nTraceback:\n{traceback.format_exc()}"
+
     url = f"https://api.telegram.org/bot{bot_token}/sendMessage"
     payload = {
-            'chat_id': chat_id,
-            'text': message
-        }
-    response = requests.post(url, data=payload)
+        'chat_id': chat_id,
+        'text': error_message
+    }
+
+    requests.post(url, data=payload)
