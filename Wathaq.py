@@ -38,14 +38,14 @@ try:
     num_female = len(female_values)
 
 
-    prev_num_sheet_url = 'https://docs.google.com/spreadsheets/d/1DVTXQjnrjO3NlFrtUuDIvnTdsn9kRvGxwzvopEAYLlQ'
+    prev_num_sheet_url = 'https://docs.google.com/spreadsheets/d/1ixe0S7_f0XKi7b6y8A6FhcI9GWwzqIZnxM_hUxDImd4/edit?gid=0#gid=0'
     prev_num_sheet = gc.open_by_url(prev_num_sheet_url)
     prev_ws = prev_num_sheet.sheet1
 
-    prev_num_male = prev_ws.acell('A1').value
+    prev_num_male = prev_ws.acell('B1').value
     prev_male = int(prev_num_male) if prev_num_male else 0
 
-    prev_num_female = prev_ws.acell('B1').value
+    prev_num_female = prev_ws.acell('C1').value
     prev_female = int(prev_num_female) if prev_num_female else 0
 
     if num_male > prev_male:
