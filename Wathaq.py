@@ -31,7 +31,7 @@ try:
 
 
     sheet_female = os.environ.get("FEMALE")
-    sh_fem = gc.open_by_url(sheet_male)
+    sh_fem = gc.open_by_url(sheet_female)
     worksheet = sh_fem.sheet1
 
     female_values = worksheet.get_all_values()
