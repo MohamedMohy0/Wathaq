@@ -4,7 +4,7 @@ import gspread
 from google.oauth2.service_account import Credentials
 from google.auth.exceptions import RefreshError
 from gspread.exceptions import APIError
-
+import traceback
 
 SERVICE_ACCOUNT_FILE = 'Config.json'
 
