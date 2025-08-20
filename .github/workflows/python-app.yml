@@ -40,7 +40,7 @@ jobs:
 
 
       - name: Run Wathaq script
-        run: python Thiefs.py
+        run: python Wathaq.py
         env:
           BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
           MOHY_ID: ${{ secrets.MOHY_ID }}
